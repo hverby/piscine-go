@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "hello hverby!"
+echo "Hello hverby!"
