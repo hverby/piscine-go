@@ -1,1 +1,1 @@
-ls -tF | tr '\n' ','
+ ls -tmF | tr -d '\n' 
