@@ -1,2 +1,2 @@
-ls -tmF | tr -d '\n' 
+ls -A -m -t -F | sed 's/ //g'
 
