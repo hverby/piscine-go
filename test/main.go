@@ -1,6 +1,6 @@
 package main
 
-import piscine "./pkg"
+import piscine ".."
 
 
 
