@@ -1,4 +1,4 @@
-package piscine
+package displaya
 
 import "fmt"
 
