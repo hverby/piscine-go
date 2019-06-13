@@ -7,6 +7,7 @@ func Sqrt(nb int) int {
 		x := math.Sqrt(float64(nb))
 		return int(x)
 	}
+
 	return 0
 
 }
