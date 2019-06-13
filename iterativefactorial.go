@@ -1,22 +1,11 @@
 package piscine
 
-/*import (
-	"fmt"
-)*/
 func IterativeFactorial(nb int) int {
-	if nb == 0 {
-		return 0
+	result := 1
+	for i := 1; i <= nb; i++ {
+		if nb > 0 {
+			result *= i
+		}
 	}
-	if nb > 1 {
-		return nb * IterativeFactorial(nb-1)
-	}
-	if nb == 1 {
-		return nb * nb
-	}
-	return 0
+	return result
 }
-
-/*func main() {
-	arg := 4
-	fmt.Println(IterativeFactorial(arg))
-}*/
