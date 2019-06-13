@@ -11,9 +11,12 @@ func RecursiveFactorial(x int) int {
 		return 1
 	} else {
 		res := 1
-		res = x * RecursiveFactorial(x-1)
-		if math.MaxInt32 < res {
-			return 0
+		for i := 1; i <= x; i++ {
+			res *= i
+			if math.MaxInt32 < res {
+				res = 0
+				break
+			}
 		}
 		return res
 	}
