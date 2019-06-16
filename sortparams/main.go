@@ -9,8 +9,8 @@ import (
 func main(){
 	args := os.Args[1:]
 	
-	sort.Slice(args, func(i, j int) bool {
-	    return args[i] < args[j]
+	sort.Slice(args, func(x, y int) bool {
+	    return args[x] < args[y]
 	})
 	
 	for _,res:= range args{
