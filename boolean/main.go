@@ -1,17 +1,28 @@
 package main
 
 import (
-	"./z01"
 	"os"
+	"errors"
+	"unicode/utf8"
 )
+func PrintRune(r rune) error {
+	l := utf8.RuneLen(r)
+	if l == -1 {
+		return errors.New("The rune is not a valid value to encode in UTF-8")
+	}
+	p := make([]byte, l)
+	utf8.EncodeRune(p, r)
+	_, err := os.Stdout.Write(p)
+	return err
+}
 
 func printStr(str string) {
 	arrayStr := []rune(str)
 
 	for i := 0; i < len(arrayStr); i++ {
-		z01.PrintRune(arrayStr[i])
+		PrintRune(arrayStr[i])
 	}
-	z01.PrintRune('\n')
+	PrintRune('\n')
 }
 
 func isEven() int {
@@ -25,7 +36,6 @@ func isEven() int {
 func main() {
 	EvenMsg := "I have an even number of arguments"
 	OddMsg := "I have an odd number of arguments"
-	
 	if isEven() == 1 {
 		printStr(EvenMsg)
 	} else {
