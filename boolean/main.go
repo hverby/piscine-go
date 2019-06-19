@@ -16,6 +16,8 @@ func PrintRune(r rune) error {
 	return err
 }
 
+
+
 func printStr(str string) {
 	arrayStr := []rune(str)
 
