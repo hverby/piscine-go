@@ -12,6 +12,7 @@ func setPoint(ptr *point) {
 	ptr.y = 21
 }
 
+
 func main() {
 	points := &point{}
 
