@@ -38,7 +38,7 @@ func main(){
 				}
 			case "%":
 				if nb2 == 0 {
-					fmt.Println("No modulo by 0")
+					fmt.Println("No Modulo by 0")
 				}else{
 					fmt.Println(nb1 % nb2)
 				}
@@ -50,6 +50,6 @@ func main(){
 			fmt.Println("1")
 		}
 	}else{
-
+		fmt.Println("0")
 	}
 }
