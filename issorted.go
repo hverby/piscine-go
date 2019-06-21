@@ -6,10 +6,10 @@ func IsSorted(f func(a, b int) int, tab []int) bool {
 	res3 := 1
 	for k,v := range tab{
 		if k != len(tab) -1 {
-			if f(v, tab[k+1]) == -1{
+			if f(v, tab[k+1]) < 0{
 				res++
 			}
-			if f(v, tab[k+1]) == 1{
+			if f(v, tab[k+1]) > 0{
 				res2++
 			}
 			if f(v, tab[k+1]) == 0{
