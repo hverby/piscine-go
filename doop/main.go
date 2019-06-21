@@ -19,9 +19,9 @@ func main(){
 	signe := []string{"+","*","-","/","%"}
 	args := os.Args[1:]
 	if len(args) != 3 {
-
+		
 	}
-	if isSigne(args[1], signe){
+	if isSigne(args[1], signe) && len(args) != 3{
 		nb1, err := strconv.Atoi(args[0])
 		nb2, err2 := strconv.Atoi(args[2])
 		if err == nil && err2 == nil{
