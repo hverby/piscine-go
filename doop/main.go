@@ -46,9 +46,10 @@ func main(){
 				fmt.Println(nb1 * nb2)
 
 			}
+		}else{
+			fmt.Println("1")
 		}
-
 	}else{
-		fmt.Println(0)
+
 	}
 }
