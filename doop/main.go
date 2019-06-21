@@ -27,21 +27,23 @@ func main(){
 		if err == nil && err2 == nil{
 			switch args[1] {
 			case "+":
-				fmt.Println(int(nb1) + int(nb2))
+				fmt.Println(nb1 + nb2)
 			case "-":
-				fmt.Println(int(nb1) - int(nb2))
+				fmt.Println(nb1 - nb2)
 			case "/":
 				if nb2 == 0 {
 					fmt.Println("No division by 0")
 				}else{
-					fmt.Println(int(nb1) / int(nb2))
+					fmt.Println(nb1 / nb2)
 				}
 			case "%":
 				if nb2 == 0 {
 					fmt.Println("No modulo by 0")
 				}else{
-					fmt.Println(int(nb1) % int(nb2))
+					fmt.Println(nb1 % nb2)
 				}
+			case "*":
+				fmt.Println(nb1 * nb2)
 
 			}
 		}
