@@ -22,8 +22,8 @@ func main(){
 
 	}
 	if isSigne(args[1], signe){
-		nb1, err := strconv.ParseInt(args[0], 10, 64)
-		nb2, err2 := strconv.ParseInt(args[0], 10, 64)
+		nb1, err := strconv.Atoi(args[0])
+		nb2, err2 := strconv.Atoi(args[2])
 		if err == nil && err2 == nil{
 			switch args[1] {
 			case "+":
