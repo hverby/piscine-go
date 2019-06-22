@@ -70,6 +70,7 @@ func main() {
 		}
 		if printName {
 			fmt.Printf("==> %s <==\n", f)
+			
 		}
 		read := make([]byte, int(nbytes))
 		_, er := fi.ReadAt(read, fileSize(fi)-int64(nbytes))
