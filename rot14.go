@@ -1,70 +1,24 @@
 package piscine
 
-import (
-	"regexp"
-	"strings"
-	"unicode"
-)
-
-
 func Rot14(str string) string {
-	fact := 14
-	res := ""
-	res2 := ""
-	for _,v := range str{
+	arrayRune := []rune(str)
+	var result string
 
-		if string(v) == " "{
-			res += " "
-		}
-		re := regexp.MustCompile("^[a-zA-Z]+")
-		if re.MatchString(string(v)){
-			if unicode.IsLower(v) {
-				codeA := 'a'
-				codeL := 'l'
-				codeZ := 'z'
-				if v >= codeA && v <= codeZ {
-					if v > codeL {
-						nb1 := v + int32(fact)
-						if nb1 == 123{
-							res += strings.ToLower(string(codeA))
-						}else{
-							nb2 := nb1 - codeZ
-							nb2 = (codeA + nb2) - 1
-							res += strings.ToLower(string(nb2))
-						}
-					}else{
-						res += strings.ToLower(string(v + 14))
-					}
-				}
-			}else{
-				codeA := 'A'
-				codeL := 'L'
-				codeZ := 'Z'
-				if v >= codeA && v <= codeZ {
-					if v > codeL {
-						nb1 := v + int32(fact)
-						if nb1 == 123{
-							res += strings.ToUpper(string(codeA))
-						}else{
-							nb2 := nb1 - codeZ
-							nb2 = (codeA + nb2) - 1
-							res += strings.ToUpper(string(nb2))
-						}
-					}else{
-						res += strings.ToUpper(string(v + 14))
-					}
-				}
+	for i := 0; i < len(arrayRune); i++ {
+		if arrayRune[i] >= 'a' && arrayRune[i] <= 'z' {
+			if arrayRune[i] >= 'm' {
+				arrayRune[i] = arrayRune[i] - 12
+			} else {
+				arrayRune[i] = arrayRune[i] + 14
 			}
-		}else{
-			continue
+		} else if arrayRune[i] >= 'A' && arrayRune[i] <= 'Z' {
+			if arrayRune[i] >= 'M' {
+				arrayRune[i] = arrayRune[i] - 12
+			} else {
+				arrayRune[i] = arrayRune[i] + 14
+			}
 		}
+		result += string(arrayRune[i])
 	}
-
-	for _,z := range res{
-		te := regexp.MustCompile("^[0-9]+")
-		if !te.MatchString(string(z)){
-			res2 += string(z)
-		}
-	}
-return res2
+	return result
 }
