@@ -54,11 +54,9 @@ func Rot14(str string) string {
 					}
 				}
 			}
+		}else{
+			continue
 		}
-
-
-
-
 	}
 return res
 }
