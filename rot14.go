@@ -15,7 +15,7 @@ func Rot14(str string) string {
 		if string(v) == " "{
 			res += " "
 		}else if(re.MatchString(string(v))){
-				
+
 		} else{
 			if unicode.IsLower(v) {
 				codeA := 'a'
@@ -60,4 +60,3 @@ func Rot14(str string) string {
 	}
 return res
 }
-
