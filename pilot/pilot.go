@@ -12,6 +12,7 @@ func main(){
 	fmt.Println(donnie)
 }
 
+
 const AIRCRAFT1=1
 type Pilot struct{
 	Name string
