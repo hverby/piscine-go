@@ -1,6 +1,5 @@
 package piscine
 
-
 import "sort"
 
 func Max(arr []int) int {
