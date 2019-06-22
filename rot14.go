@@ -1,6 +1,7 @@
 package piscine
 
 import (
+	"regexp"
 	"strings"
 	"unicode"
 )
@@ -9,9 +10,13 @@ func Rot14(str string) string {
 	fact := 14
 	res := ""
 	for _,v := range str{
+		re := regexp.MustCompile("^[0-9_]*$")
+
 		if string(v) == " "{
 			res += " "
-		}else{
+		}else if(re.MatchString(string(v))){
+				fmt.Println("capturé")
+		} else{
 			if unicode.IsLower(v) {
 				codeA := 'a'
 				codeL := 'l'
@@ -53,6 +58,6 @@ func Rot14(str string) string {
 		}
 
 	}
-	return res
+return res
 }
 
