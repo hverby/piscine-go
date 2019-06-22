@@ -11,12 +11,12 @@ func Rot14(str string) string {
 	fact := 14
 	res := ""
 	for _,v := range str{
-		re := regexp.MustCompile("^[0-9]*$")
+		re := regexp.MustCompile("^[a-zA-Z]+")
 
 		if string(v) == " "{
 			res += " "
 		}
-		if!re.MatchString(string(v)){
+		if re.MatchString(string(v)){
 			if unicode.IsLower(v) {
 				codeA := 'a'
 				codeL := 'l'
