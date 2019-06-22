@@ -2,29 +2,29 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
 	"os"
 )
 
-func cat(){
-	args := os.Args[1:]
-	if len(args) == 0 {
-		 fmt.Println("Hello")
-		 fmt.Println("Hello")
-	}
-	if len(args) > 0 {
-		for i := 0; i < len(args) ;i++{
-			file, err := os.Open(args[i])
-			if err != nil{
-				fmt.Printf("the mistake is %v\n", err.Error())
-			}
-			arr := make([]byte, 500)
-			file.Read(arr)
-			fmt.Println(string(arr))
+func main() {
+	size := len(os.Args)
+	/*	if size == 1 {
+		for { //could use fmt.scanf but not sure if the student can use it
+			reader := bufio.NewReader(os.Stdin)
+			data, _ := reader.ReadString('\n')
+			fmt.Print(data)
 		}
+	} else if len(os.Args) > 1 {*/
+	for i := 1; i < size; i++ {
+		data, err := ioutil.ReadFile(os.Args[i])
+		if err != nil {
+			fmt.Println(err.Error())
+			return
+		}
+		fmt.Println(string(data))
+		fmt.Println()
 	}
-}
 
+	//}
 
-func main()  {
-	cat()
 }
