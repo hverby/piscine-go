@@ -1,4 +1,5 @@
-package piscine 
+    
+package piscine
 
 type NodeL struct {
 	Data interface{}
@@ -10,17 +11,19 @@ type List struct {
 	Tail *NodeL
 }
 
-func ListPushBack(l *List, data interface{}){
-	n := &NodeL{Data:data}
+//function to insert element in the last position of the list
+func ListPushBack(l *List, data interface{}) {
+
+	n := &NodeL{Data: data}
 
 	if l.Head == nil {
 		l.Head = n
 		return
 	}
 
-	for l.Head.Next != nil{
-		l.Head = l.Head.Next
+	iterator := l.Head
+	for iterator.Next != nil {
+		iterator = iterator.Next
 	}
-	l.Head.Next = n
-
+	iterator.Next = n
 }
