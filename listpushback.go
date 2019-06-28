@@ -2,15 +2,6 @@
 package piscine
 
 
-type NodeL struct {
-	Data interface{}
-	Next *NodeL
-}
-
-type List struct {
-	Head *NodeL
-	Tail *NodeL
-}
 
 //function to insert element in the last position of the list
 func ListPushBack(l *List, data interface{}) {
