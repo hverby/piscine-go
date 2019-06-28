@@ -5,7 +5,6 @@ func ListSize(l *List) int {
 	i := 0
 	for it != nil {
 		i++
-		fmt.Println(it.Data)
 		it = it.Next
 	}
 	return i
