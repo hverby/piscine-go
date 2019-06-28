@@ -1,5 +1,5 @@
 package piscine
 
-func ListClear(l *NodeL) {
+func ListClear(l *List) {
 	l.Head = nil
 }
