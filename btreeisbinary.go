@@ -1,6 +1,6 @@
 package piscine
 
-func BTreeIsBinary(root TreeNode) bool {
+func BTreeIsBinary(root *TreeNode) bool {
     if root == nil {
         return true
     }
