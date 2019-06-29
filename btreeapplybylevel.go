@@ -1,10 +1,12 @@
 package piscine
 
+import "fmt"
+
 func BTreeApplyByLevel(root *TreeNode, fn interface{})  {
 if root == nil {
 		return
 	}
-	f(root.Data)
-	BTreeApplyPreorder(root.Left, f)
-	BTreeApplyPreorder(root.Right, f)
+	fmt.Println(fn.Data)
+	BTreeApplyPreorder(root.Left, fn)
+	BTreeApplyPreorder(root.Right, fn)
 }
