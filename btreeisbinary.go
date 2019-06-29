@@ -1,4 +1,4 @@
-package piscine 
+package piscine
 
 func BTreeIsBinary(root *TreeNode) bool {
 	if root == nil {
